@@ -4,12 +4,12 @@ node_js:
   - "12"
   
 env:
-  - DATABASE_URL=postgresql://postgres@localhost:5432/fruit_backet
+  - DATABASE_URL=postgresql://postgres@localhost:5432/fruit_basket
 
 before_script:
   - npm install
-  - psql -c 'create database  fruit_backet;' -U postgres
-  - psql -U postgres -d fruit_backet -a -f tables.sql
+  - psql -c 'create database  fruit_basket;' -U postgres
+  - psql -U postgres -d fruit_basket -a -f tables.sql
 
 services:
   - postgresql
